@@ -6,18 +6,18 @@
   };
 
   type Worker = {
-    empolteeId: number;
+    empolyeeId: number;
     work: () => void;
   };
 
   function internWork(person: Student & Worker) {
-    console.log(person.name, person.empolteeId, person.work());
+    console.log(person.name, person.empolyeeId, person.work());
   }
 
   internWork({
     name: "ellie",
     score: 1,
-    empolteeId: 123,
+    empolyeeId: 123,
     work: () => {},
   });
 }
