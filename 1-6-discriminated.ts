@@ -1,26 +1,20 @@
-namespace Union {
-  // Union Types: OR
-  type Direction = "left" | "right" | "up" | "down";
-  function move(direction: Direction) {
-    console.log(direction);
-  }
-  move("down");
-
-  type TileSize = 8 | 16 | 32;
-  const tile: TileSize = 16;
-
+namespace Discriminated {
   //   function: login -> success, fail
   type SuccessState = {
+    result: "success";
     response: {
       body: string;
     };
   };
   type FaileState = {
+    result: "fail";
     reason: string;
   };
   type LoginState = SuccessState | FaileState;
+
   function login(): SuccessState | FaileState {
     return {
+      result: "success",
       response: {
         body: "logged in!",
       },
@@ -31,7 +25,7 @@ namespace Union {
   // success -> 🎉 body
   // fail -> 😭 reason
   function printLoginState(state: LoginState) {
-    if ("response" in state) {
+    if (state.result === "success") {
       console.log(`🎉 ${state.response.body}`);
     } else {
       console.log(` 😭${state.reason}`);
