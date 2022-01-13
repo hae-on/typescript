@@ -22,7 +22,6 @@
   console.log(Days.Thursday);
   const day = Days.Saturday;
   console.log(day);
-
   //  day = 10 할당해도 오류 뜨지 않음 ->enum 사용 지양
 
   // union으로 대체

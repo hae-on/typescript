@@ -1,8 +1,8 @@
 {
   // JavaScript 💩
-  function jsAdd(num1, num2) {
-    return num1 + num2;
-  }
+  // function jsAdd(num1, num2) {
+  //   return num1 + num2;
+  // }
 
   //   TypeScript ✨
   function add(num1: number, num2: number): number {
@@ -10,14 +10,14 @@
   }
 
   // JavaScript 💩
-  function jsFetchNum(id) {
-    // code...
-    // code...
-    // code...
-    return new Promise((resolve, reject) => {
-      resolve(100);
-    });
-  }
+  // function jsFetchNum(id) {
+  //   // code...
+  //   // code...
+  //   // code...
+  //   return new Promise((resolve, reject) => {
+  //     resolve(100);
+  //   });
+  // }
 
   // TypeScript ✨
   function FetchNum(id: string): Promise<number> {
