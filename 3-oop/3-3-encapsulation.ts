@@ -41,4 +41,27 @@
   const maker2 = CoffeeMaker.makeMachine(3);
 
   // maker.coffeeBeans = -35; //invalid
+
+  class User {
+    // fullName: string;으로 작성하면 뒤에서 firstName 변경해도 적용 안 됨
+    get fullName(): string {
+      return `${this.firstName} ${this.lastName}`;
+    }
+    private internalAge = 4;
+    get age(): number {
+      return this.internalAge;
+    }
+    set age(num: number) {
+      if (num < 0) {
+        console.log("Error");
+      }
+      this.internalAge = num;
+    }
+    constructor(private firstName: string, private lastName: string) {
+      this.firstName = firstName;
+      this.lastName = lastName;
+    }
+  }
+  const user = new User("Steve", "Jobs");
+  user.age = 6;
 }
