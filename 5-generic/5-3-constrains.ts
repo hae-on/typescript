@@ -34,6 +34,7 @@ bob.workPartTime();
 const ellieAfterPay = pay(ellie);
 const bobAfterPay = pay(bob);
 
+
 const obj = {
   name: "ellie",
   age: 20,
