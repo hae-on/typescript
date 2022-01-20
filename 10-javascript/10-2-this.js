@@ -7,6 +7,9 @@ simpleFunc();
 
 class Counter {
   count = 0;
+  //   increase = function () {
+  //     console.log(this);
+  //   };
   increase = () => {
     console.log(this);
   };
