@@ -24,8 +24,6 @@ export class VideoComponent extends BaseComponent<HTMLElement> {
       /^(?:https?:\/\/)?(?:www\.)?(?:(?:youtube.com\/(?:(?:watch\?v=)|(?:embed\/))([a-zA-Z0-9-]{11}))|(?:youtu.be\/([a-zA-Z0-9-]{11})))/;
     const match = url.match(regExp);
 
-    console.log(match);
-
     const videoId = match ? match[1] || match[2] : undefined;
     if (videoId) {
       return `https://www.youtube.com/embed/${videoId}`;
@@ -33,13 +31,3 @@ export class VideoComponent extends BaseComponent<HTMLElement> {
     return url;
   }
 }
-
-// <iframe
-//   width="950"
-//   height="534"
-//   src="https://www.youtube.com/embed/fn8Hz1UgCjg"
-//   title="YouTube video player"
-//   frameborder="0"
-//   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-//   allowfullscreen
-// ></iframe>;
